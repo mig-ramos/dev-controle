@@ -14,7 +14,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "DEV Control",
+  title: "DEV Controle",
   description: "Controle de atendimentos de serviços.",
 };
 
