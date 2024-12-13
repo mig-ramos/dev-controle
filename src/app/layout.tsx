@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+import { Header } from "@/components/header";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -13,8 +14,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "IOT Home Alarm",
-  description: "Residential protection and control system.",
+  title: "DEV Control",
+  description: "Controle de atendimentos de serviços.",
 };
 
 export default function RootLayout({
@@ -25,6 +26,7 @@ export default function RootLayout({
   return (
     <html lang="pt-BR">
       <body className={``}>
+        <Header />
         {children}
       </body>
     </html>
