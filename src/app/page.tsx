@@ -11,6 +11,7 @@ export default function Home() {
         alt="hero da home"
         width={600}
         className="max-w-sm md:max-w-xl"
+        priority
       />
     </main>
   );
