@@ -1,0 +1,11 @@
+
+## ROTA CADASTRO CUSTOMER
+POST http://localhost:3000/api/customer
+Content-Type: application/json
+
+{
+    "name": "Cliente Teste",
+    "email": "cliente@teste.com",
+    "phone": "47 999988888",
+    "address": "Rua 15, 235 - Centro"
+}
