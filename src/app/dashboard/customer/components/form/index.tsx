@@ -36,8 +36,9 @@ export function NewCustomerForm({userId}: {userId: string}) {
             address: data.address,
             userId: userId
         })
-        // console.log(response.data)
-        router.replace("/dashboard/customer")
+
+        router.refresh();
+        router.replace("/dashboard/customer");
     }
 
     return (
@@ -61,7 +62,7 @@ export function NewCustomerForm({userId}: {userId: string}) {
                         register={register}
                     />
                 </div>
-                <div >
+                <div className="flex-1" >
                     <label className="mb-1 text-lg font-medium">E-mail</label>
                     <Input
                         type="email"
