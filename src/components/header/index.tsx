@@ -4,7 +4,7 @@ import { FiUser, FiLogOut, FiLoader, FiLock } from 'react-icons/fi'
 import { signIn, signOut, useSession } from "next-auth/react"
 
 export function Header() {
-    const { status, data } = useSession();
+    const { status } = useSession();
 
     console.log(status);
 
@@ -20,11 +20,11 @@ export function Header() {
         <header className="w-full flex items-center px-2 py-4 bg-white h-20 shadow-sm">
             <div className="w-full flex items-center justify-between max-w-6xl mx-auto">
                 <Link href={"/"}>
-                    <h1 className="font-bold text-2xl pl-1 hover:tracking-widest duration-300">
+                    <h1 className="font-bold text-2xl pl-1 text-black hover:tracking-widest duration-300">
                         <span className="text-blue-500">DEV</span> CONTROLE
                     </h1>
                 </Link>
-
+                
                 {status === "loading" && (
                     <button className="animate-spin">
                         <FiLoader size={26} color="#4b5563" />
@@ -48,6 +48,7 @@ export function Header() {
                         </button>
                     </div>
                 )}
+
             </div>
         </header>
     )
